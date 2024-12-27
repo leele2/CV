@@ -1,0 +1,189 @@
+% we use the 'tcolorbox' package to create most of the formatting
+\usepackage[most]{tcolorbox}
+% we use 'geometry' package so that we can set the margins to be exactly we eant. In this case, 2.54 cm all around, to match those that MS word uses by default. Note that we set different margins at the top and bottom to take account of the custom header and footer that we are using. 
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=1.6cm,
+    right=1.6cm,
+    top=0.0cm,
+    bottom=0.1cm
+}
+
+% Fonts
+\usepackage[adobe-utopia]{mathdesign}
+\usepackage[T1]{fontenc}
+% we use the 'tcolorbox' package to create most of the formatting
+\usepackage[most]{tcolorbox}
+% we use 'geometry' package so that we can set the margins to be exactly we eant. In this case, 2.54 cm all around, to match those that MS word uses by default. Note that we set different margins at the top and bottom to take account of the custom header and footer that we are using. 
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=1.6cm,
+    right=1.6cm,
+    top=0.0cm,
+    bottom=0.1cm
+}
+
+% Fonts
+\usepackage[adobe-utopia]{mathdesign}
+\usepackage[T1]{fontenc}
+% \usepackage{fourier-otf}
+
+% to have awesome icon 
+\usepackage{fontawesome5}
+%\usepackage{fontawesome5} 
+\usepackage{academicons}
+
+% advanced drawing
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{smartdiagram}
+\usepackage{float}
+\usepackage{array}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{fadings}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.misc,positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{shadings}
+\usetikzlibrary{calendar}
+\usetikzlibrary{er}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shapes}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{decorations}
+\usetikzlibrary{topaths}
+\usepackage{graphicx}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+
+% set TikZ styles
+\tikzset{
+    contactIcon/.style={%
+            minimum height=\baselineskip,
+        }
+}
+
+% pictures
+\usepackage{graphicx}
+% loads graphicx, provides align=c option for vertical alignment w.r.t. text
+\RequirePackage{graphbox}
+
+% more advanced expressions in \setlength
+\usepackage{calc}
+
+% links
+\usepackage{hyperref}
+
+% Define Colors
+\RequirePackage{xcolor}
+\definecolor{titleBackColor}{rgb}{0.25,0.25,0.25}
+\definecolor{sideBarColor}{rgb}{0.6,0.6,0.6}
+
+% Define Lengths
+\newlength\cvPictureWidth
+\setlength\cvPictureWidth{4cm}
+\def\sectionspace{\vspace*{0.22cm}}
+
+% avoid line overflow
+% \setlength{\emergencystretch}{2pt}
+
+\newcommand*{\recipient}[4]{
+    \begin{minipage}[t]{0.4\textwidth}
+        \textbf{#1} \\
+        {#3}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{flushright}
+            \today{}
+        \end{flushright}
+    \end{minipage}
+    \ruleline{\textbf{#4}}\\
+    \vspace*{0.2cm}
+    Dear {#2},\\
+}
+
+% Command for letter content
+\usepackage{ragged2e}
+\usepackage[skip=0.2cm]{parskip}
+\newcommand\coverContent[1]{
+    \begin{justify}
+        \foreach \x in {#1}{
+                \noindent{}{\x}\par
+            }
+    \end{justify}
+
+}
+
+% Define constants for the 5 variables for coverhead function
+\newcommand{\myHeaderColor}{titleBackColor} % Background color for the header
+\newcommand{\myFirstName}{Lee}            % First name
+\newcommand{\myLastName}{Luderman}        % Last name
+\newcommand{\myDescription}{Computational Data Analyst | Software Engineers | Expertise in Python, R, and \textsc{Matlab}}  % Description
+\newcommand{\myTextColor}{white}          % Text color for the header
+% The coverheader function
+\newcommand{\coverheader}[5]{
+    \tikz[remember picture,overlay] {%
+        \node[rectangle, fill=#1, anchor=north, minimum width=\paperwidth, minimum height=3.5cm](header) at (current page.north){};% 
+        \node[draw=none, align=left](name) at (header) {%
+            {\Huge \color{#5} #2 \textbf{#3}}%
+        };%
+        \node[draw=none, below](description) at (name.south) {\color{white}#4};% 
+    }\vspace{-0.7cm}%
+    \vspace*{3.5cm}
+    \flushleft{\adjustbox{valign=t, width = \paperwidth}{%
+            \hspace{-\dimexpr1in+\oddsidemargin\relax}%
+            \begin{tcolorbox}[colback=sideBarColor,boxrule=0pt,frame empty,sharp corners, halign=center, width = \paperwidth]
+                \hspace{-\dimexpr1in+\oddsidemargin\relax}%
+                \begin{tabular}{c | c | c}
+                    \faEnvelope{} \href{mailto:leeluderman@googlemail.com}{leeluderman@googlemail.com} &
+                    \faPhone{} +61 420254547                                                           &
+                    \faMapMarker{} Sydney, NSW 2218, Australia
+                \end{tabular}
+            \end{tcolorbox}
+        }}
+    \vspace*{0.2cm}
+}
+
+
+% Command Example:
+% \simpleheader{titleBackColor}{Name}{Surname}{Job}{textColor}
+
+% Next page header
+\newcommand{\newpageheader}[5]{
+    \tikz[remember picture,overlay] {%
+        \node[rectangle, fill=#1, anchor=north, minimum width=\paperwidth, minimum height=1.4cm](header) at (current page.north){};%
+    }\vspace{0cm}%
+    \begin{tcolorbox}[colback=titleBackColor,boxrule=0pt,frame empty]
+        \large \textcolor{#5}{#2 \textbf{#3}}
+        \hspace*{0.2\textwidth}{\large \textcolor{#5}{#4}}
+        \hspace*{\fill}{\large \textcolor{#5}{Additional Information}}
+    \end{tcolorbox}
+}
+
+% SideBar
+\newcommand{\sidebar}[1]{
+    \tikz[remember picture,overlay] {%
+        \node[rectangle, fill=#1, anchor=north west, minimum width=8.6cm, minimum height=\paperheight](header) at (current page.north west){};%
+    }\vspace{-0.7cm}%
+}
+
+\usepackage{lipsum} % dummy text
+\usepackage{adjustbox} % to a better alignement of text
+
+% Format of the title section in the side column
+% based on https://tex.stackexchange.com/questions/65731
+\makeatletter
+\def\cv@hrulefill{{\color{titleBackColor}\leavevmode\leaders\hrule height 1pt\hfill\kern\z@}}
+% line before and after text (some tweaking is required here)
+% based on https://tex.stackexchange.com/questions/15119
+\NewDocumentCommand{\ruleline}{m}{\par\noindent\raisebox{\baselineskip/4}{\makebox[\linewidth]{\cv@hrulefill\hspace{1ex}\raisebox{-\baselineskip/4}{\large #1}\hspace{1ex}\cv@hrulefill}}\vspace*{0.05cm}}
+\makeatother
+
+% Info
+\title{My CoverLetter}
+\date{03/10/2022}
+\author{Lee.Luderman}
