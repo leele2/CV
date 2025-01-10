@@ -168,23 +168,37 @@
     \hfill \vline \hfill
     \adjustbox{valign=t}{\begin{minipage}{8.5cm}
             {\normalsize \bfseries #2}
-            \hfill {\footnotesize\faMapMarker  ~ #3}
+            \hfill {\footnotesize \faMapMarker  ~ #3}
             \newline
             %{\small \bfseries #3} \\
-            \small {\emph{#4}} \\
+            % \small {\emph{#4}} \\
+            {\small\bfseries #4\vspace*{0.1cm}}
+            \newline
             \footnotesize {#5}
         \end{minipage}}
 }
 
+% % Publication Section
+% \newcommand{\publication}[6]{ % Article/Conference, year, name, authors, journal, DOI
+%     \adjustbox{valign=t}{\begin{minipage}{2.5cm}
+%             {\small \textbf{#1} \\ \footnotesize #2} \\
+%         \end{minipage}}
+%     \hfill
+%     \adjustbox{valign=t}{\begin{minipage}{8cm}
+%             {\footnotesize \textbf{#3}, #4 \faGithub \hspace{0.1mm} \href{#5}{#6}}
+%         \end{minipage}}
+% }
+
 % Publication Section
-\newcommand{\publication}[6]{ % Article/Conference, year, name, authors, journal, DOI
-    \adjustbox{valign=t}{\begin{minipage}{2.5cm}
-            {\small \textbf{#1} \\ \footnotesize #2} \\
-        \end{minipage}}
-    \hfill
-    \adjustbox{valign=t}{\begin{minipage}{8cm}
-            {\footnotesize \textbf{#3}, #4 \faGithub \hspace{0.1mm} \href{#5}{#6}}
-        \end{minipage}}
+\newcommand{\publication}[7]{ % Article/Conference, year, name, authors, journal, DOI
+    \footnotesize
+    \textbf{#3}\newline
+    #4
+    {\hspace{0.1mm} \href{#5}{\faGithub#6}~-~\normalsize
+        \foreach \x in {#7}{
+                {\x}~
+            }}
+
 }
 
 % ITC section
