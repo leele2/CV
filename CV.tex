@@ -2,6 +2,7 @@
 
 \documentclass[11 pt,oneside,a4paper,titlepage]{article}
 \usepackage{preamble}
+\usepackage{data_file}
 \graphicspath{{PIC/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -135,31 +136,16 @@
 \newpageheader{titleBackColor}{Lee}{Luderman}{}{white}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SIDEBAR %%%%%%%%%%%%%%%%%%%
+%%%% SIDEBAR %%%%
 \adjustbox{valign=t}{%
     \begin{minipage}{7.3cm}
         \vspace*{0.4cm} % text starts 0.4cm under the top the header
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Publications
+        %%% Projects %%%
         \ruleline{\textbf{PROJECTS}}
-
-        %%% Languages Logos %%%
-        %\flag{C.png} C,
-        % \faCss3 CSS,
-        % \faHtml5 HTML,
-        % \faReact React,
-        % \faGit* Git,
-        % \flag{R.png} R,
-        % \flag{MatlabLogo.png} Matlab,
-        % \faPython Python,
-
-        \publication{Master Thesis}{2022}{Pricing Asian Options in Matlab}{Implemented a pricing model in \textsc{Matlab} and improved its efficiency by reducing the time complexity of the algorithm.}{https://github.com/leele2/Mathematics-in-Business-Project/blob/master/report.pdf}{View on Github}{\LaTeX,\flag{MatlabLogo.png},\faPython}
-
-        \sectionspace
-
-        \publication{End-of-year Project}{2020}{MHW and Their Effects on Phytoplankton}{Utilized R to analyze large satellite datasets, identifying marine heat waves and their effects on phytoplankton.}{https://github.com/leele2/Research-in-Mathematical-Sciences---CA3/blob/main/report.pdf}{View on Github}{\LaTeX,\flag{R.png},\faPython}
-
+        \projects{\projectList}
         \vspace{0.3cm}
+        %%% %%%
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         % Professional Skills 

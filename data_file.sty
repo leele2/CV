@@ -1,0 +1,17 @@
+\ProvidesPackage{data_file}[2025/01/14 Project Data]% data.sty Here all infomation is stored which produces the CV
+
+% Define the list of projects
+% INPUT: {project-type}/{year}/{title}/{details}/{url}/{url-embeded text}/{languages used},
+%% Languages Logos %%
+%\flag{C.png} C,
+% \faCss3 CSS,
+% \faHtml5 HTML,
+% \faReact React,
+% \faGit* Git,
+% \flag{R.png} R,
+% \flag{MatlabLogo.png} Matlab,
+% \faPython Python,
+\newcommand{\projectList}{%
+{Passion Project}/{2024}/{Selenium Chess Bot}/{Python-based project designed to interface with Lichess. It includes functionality to detect where pieces are on the board using html, calculate the best move, inject JavaScript to display the best move. Automatic releases with the use of github actions.}/{https://github.com/leele2/Selenium-Lichess-Bot}/{View on Github}/{\faPython, \faHtml5, \faCss3, \faGit*},
+{Master Thesis}/{2022}/{Pricing Asian Options in Matlab}/{Implemented a pricing model in \textsc{Matlab} and improved its efficiency by reducing the time complexity of the algorithm.}/{https://github.com/leele2/Mathematics-in-Business-Project/blob/master/report.pdf}/{View on Github}/{\LaTeX, \flag{MatlabLogo.png}, \faPython},
+{End-of-year Project}/{2020}/{MHW and Their Effects on Phytoplankton}/{Utilized R to analyze large satellite datasets, identifying marine heat waves and their effects on phytoplankton.}/{https://github.com/leele2/Research-in-Mathematical-Sciences---CA3/blob/main/report.pdf}/{View on Github}/{\LaTeX, \flag{R.png}, \faPython}}

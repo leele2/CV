@@ -178,19 +178,9 @@
         \end{minipage}}
 }
 
-% % Publication Section
-% \newcommand{\publication}[6]{ % Article/Conference, year, name, authors, journal, DOI
-%     \adjustbox{valign=t}{\begin{minipage}{2.5cm}
-%             {\small \textbf{#1} \\ \footnotesize #2} \\
-%         \end{minipage}}
-%     \hfill
-%     \adjustbox{valign=t}{\begin{minipage}{8cm}
-%             {\footnotesize \textbf{#3}, #4 \faGithub \hspace{0.1mm} \href{#5}{#6}}
-%         \end{minipage}}
-% }
-
-% Publication Section
-\newcommand{\publication}[7]{ % Article/Conference, year, name, authors, journal, DOI
+%% Project Section %%
+% project display format function
+\newcommand{\project}[7]{ % project-type, year, title, details, url, url-embeded text, languages used
     \footnotesize
     \textbf{#3}\newline
     #4
@@ -198,8 +188,22 @@
         \foreach \x in {#7}{
                 {\x}~
             }}
-
 }
+
+% Define the projects command that takes an input
+\newcommand{\projects}[1]{%
+    \foreach \x [count=\i] in #1 {
+            % Add \sectionspace above for all except the first project
+            \ifnum\i > 1
+                \sectionspace
+            \fi
+            \foreach \projectType/\year/\title/\details/\url/\urlText/\technologies in \x {
+                \project{\projectType}{\year}{\title}{\details}{\url}{\urlText}{\technologies}
+            }
+            \par
+        }
+}
+%% %%
 
 % ITC section
 \newcommand{\ITCcompetence}[2]{ % input: Branch, description
