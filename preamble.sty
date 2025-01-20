@@ -200,9 +200,6 @@
 }
 %% %%
 
-% ITC section
-\newcommand{\ITCcompetence}[2]{ % input: Branch, description
-    \adjustbox{valign=t}{\begin{minipage}{2cm}
 %% Skills and Strengths %%
 % CV tag for skills
 \newcommand{\cvtag}[1]{%
@@ -234,14 +231,38 @@
     \end{multicols}
 }
 %% %%
+
+%% Technical Expertise and Applications %%
+\newcommand{\techExpertiseApplication}[2]{ % input: Skill, Application
+    \adjustbox{valign=t}{
+        \begin{minipage}{2cm}
             \begin{center}
                 {\footnotesize \bfseries #1} \\
                 \vspace*{0.1cm}
             \end{center}
         \end{minipage}}
     \hfill \vline \hfill
-    \adjustbox{valign=t}{\begin{minipage}{8.5cm}
-            {\footnotesize #2}
+    \adjustbox{valign=t}{
+        \begin{minipage}{8.5cm}
+            \foreach \technology/\example in #2 {
+                    \footnotesize \textbf{\technology}:
+                    \example \par\vspace{0.1cm}
+                }
+        \end{minipage}}
+}
+
+% Define the new command that processes the list of competencies
+\newcommand{\techExpertiseApplications}[1]{%
+    \foreach \x in {#1} {
+            \foreach \a/\b in \x {
+                \techExpertiseApplication{\a}{\b}
+                %
+            }
+            
+            \sectionspace
+        }
+}
+%% %%
         \end{minipage}}
 }
 
