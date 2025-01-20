@@ -218,6 +218,22 @@
     \end{center}%
 }
 %% %%
+
+%% Other Interests %%
+% Define the other interests command that takes a list
+\newcommand{\otherInterests}[1]{%
+    \small
+    \begin{multicols}{2}
+        \begin{itemize}
+            \foreach \x in #1 {
+            \foreach \icon/\interest in \x {
+            \item[\icon] \interest
+                }
+                }
+        \end{itemize}
+    \end{multicols}
+}
+%% %%
             \begin{center}
                 {\footnotesize \bfseries #1} \\
                 \vspace*{0.1cm}

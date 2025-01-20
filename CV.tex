@@ -157,23 +157,12 @@
         \listskills{\softSkillsList}
         %%% %%%
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Other Interests
+        %%% Other Interests %%%
         \ruleline{\textbf{Other Interests}}
-        \small
-        \begin{multicols}{2}
-            \begin{itemize}
-                \item[\flag{gymnastics.png}] Gymnastics
-                \item[\faDumbbell] Gym
-                \item[\faPlane] Travelling
-                \item[\faMotorcycle] Motorbiking
-                \item[\flag{bouldering.png}] Climbing
-                \item[\faChessRook] Chess
-            \end{itemize}
-        \end{multicols}
+        \otherInterests{\otherInterestsList}
+        %%% %%%
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % QR Code
+        %%% QR Code %%%
         \ruleline{\textbf{Download My CV}}
         \scriptsize
         \centering
@@ -181,9 +170,10 @@
         \begin{center}
             \quad
             \qrcode[height=2cm]{
-                https://github.com/leele2/CV/blob/master/CV.pdf} \\
+                \linkToCV} \\
             \vspace*{0.5cm}
         \end{center}
+        %%% %%%
 
     \end{minipage}
 }%
