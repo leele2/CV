@@ -76,11 +76,6 @@
 % avoid line overflow
 % \setlength{\emergencystretch}{2pt}
 
-% CV tag for skills
-\newcommand{\cvtag}[1]{%
-    \tikz[baseline]\node[anchor=base,draw=black!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{\footnotesize #1};
-}
-
 % top box with simple header
 \newcommand{\simpleheader}[5]{
     \tikz[remember picture,overlay] {%
@@ -208,6 +203,21 @@
 % ITC section
 \newcommand{\ITCcompetence}[2]{ % input: Branch, description
     \adjustbox{valign=t}{\begin{minipage}{2cm}
+%% Skills and Strengths %%
+% CV tag for skills
+\newcommand{\cvtag}[1]{%
+    \tikz[baseline]\node[anchor=base,draw=black!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{\footnotesize #1};
+}
+
+% List Skills
+\newcommand{\listskills}[1]{%
+    \begin{center}%
+        \foreach \tag in #1 {%
+                \cvtag{\tag}%
+            }%
+    \end{center}%
+}
+%% %%
             \begin{center}
                 {\footnotesize \bfseries #1} \\
                 \vspace*{0.1cm}
