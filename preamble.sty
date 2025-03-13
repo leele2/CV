@@ -111,6 +111,14 @@
         \end{tikzpicture}
     \end{center}
 }
+\newcommand{\aboutMe}[1]
+{
+    \ruleline{\textbf{About Me}}
+    % {{#1}}
+    \adjustbox{valign=t}{\begin{minipage}{7cm}
+            {\normalsize\RaggedRight #1}
+        \end{minipage}}
+}
 
 % Next page header
 \newcommand{\newpageheader}[5]{
