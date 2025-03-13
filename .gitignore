@@ -6,6 +6,6 @@ z_output/*.out
 z_output/*.synctex.gz
 z_output/WorkingCoverLetter.pdf
 z_output/Images/WorkingCoverLetterpage*.png
-WorkingCoverLetter.pdf
-WorkingCoverLetter.tex
+Templates/*
 Sent
+WorkingCoverLetter.*
