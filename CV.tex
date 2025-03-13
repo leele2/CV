@@ -82,38 +82,18 @@
 
         \sectionspace
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Work Experience
-        \section*{{\faSuitcase} WORK EXPERIENCE}
+        %%% Technical Expertise and Applications %%%
+        \section*{{\faDesktop} Technical Expertise and Applications}
 
-        \MySectionB{{Aug}~2024{-}Present}{LDL.png}{Sole Trader~-~Bookkeeping}{LDL Contracting Services}{Sydney, NSW}
-        {{Responsibilities \& Achievements}
-        \begin{itemize}
-            \item Managed full-cycle bookkeeping, including reconciling accounts, uploading receipts and invoices (both digitally and physically), and maintaining financial records using Xero and Dext.
-            \item Automated data processing tasks by writing a Python script to convert .txt files to .csv format when the previous bank did not support exporting .csv files.
-            \item Provided detailed financial summaries to assist in decision-making and compliance with tax obligations.
-        \end{itemize}}
+        % requires \expand since nested list exists.
+        \expandafter\techExpertiseApplications\expandafter{\techExpertiseApplicationList}
+        %%% %%%
 
-        \sectionspace
+        %%% Certificates %%%
+        \section*{{\faCertificate} CERTIFICATES}
 
-        \MySectionB{{Feb}~2023{-}{Aug}~2024}{RYSA.png}{Restoration Technician}{RYSA Group LTD}{Wagga Wagga, NSW}
-        {{Responsibilities \& Achievements}
-        \begin{itemize}
-            \item Managed data recording and authored detailed restoration reports.
-            \item Developed and deployed a Python-based email pipeline using the Gmail API.
-            \item Designed and launched the company website using the Next.js React framework.
-        \end{itemize}}
-
-        \sectionspace
-
-        \MySectionNoPic{{Dec}~2013{-}{Sep}~2020}{Bookkeeper}{London, UK}{East London Pallets LTD}{{Responsibilities \& Achievements}
-        \begin{itemize}
-            \item Digitized financial accounts, improving accuracy and efficiency in tracking expenses, sales, and stock.
-            \item Implemented a marginal tax scheme, reducing VAT costs through optimized stock records.
-            \item Created performance dashboards, providing directors with clear, actionable insights.
-            \item Successfully led a change of use application, securing local council approval for the company's strategic growth.
-            \item Developed time-series graphs in R to illustrate the impact of COVID restrictions on business performance, securing government support.
-        \end{itemize}}
+        \certificates{}
+        %%% %%%
 
     \end{minipage}} %
 
@@ -171,30 +151,45 @@
 \adjustbox{valign=t}{%
     \begin{minipage}{11.3cm}
         \vspace*{0.4cm}
-        %%% Technical Expertise and Applications %%%
-        \section*{{\faDesktop} Technical Expertise and Applications}
+        % %%% Technical Expertise and Applications %%%
+        % \section*{{\faDesktop} Technical Expertise and Applications}
 
-        % requires \expand since nested list exists.
-        \expandafter\techExpertiseApplications\expandafter{\techExpertiseApplicationList}
+        % % requires \expand since nested list exists.
+        % \expandafter\techExpertiseApplications\expandafter{\techExpertiseApplicationList}
+        % %%% %%%
+
+        %%% Work Experience %%%
+        \section*{{\faSuitcase} WORK EXPERIENCE}
+
+        \MySectionB{{Aug}~2024{-}Present}{LDL.png}{Sole Trader~-~Bookkeeping}{LDL Contracting Services}{Sydney, NSW}
+        {{Responsibilities \& Achievements}
+        \begin{itemize}
+            \item Managed full-cycle bookkeeping, including reconciling accounts, uploading receipts and invoices (both digitally and physically), and maintaining financial records using Xero and Dext.
+            \item Automated data processing tasks by writing a Python script to convert .txt files to .csv format when the previous bank did not support exporting .csv files.
+            \item Provided detailed financial summaries to assist in decision-making and compliance with tax obligations.
+        \end{itemize}}
+
+        \sectionspace
+
+        \MySectionB{{Feb}~2023{-}{Aug}~2024}{RYSA.png}{Restoration Technician}{RYSA Group LTD}{Wagga Wagga, NSW}
+        {{Responsibilities \& Achievements}
+        \begin{itemize}
+            \item Managed data recording and authored detailed restoration reports.
+            \item Developed and deployed a Python-based email pipeline using the Gmail API.
+            \item Designed and launched the company website using the Next.js React framework.
+        \end{itemize}}
+
+        \sectionspace
+
+        \MySectionNoPic{{Dec}~2013{-}{Sep}~2020}{Bookkeeper}{London, UK}{East London Pallets LTD}{{Responsibilities \& Achievements}
+        \begin{itemize}
+            \item Digitized financial accounts, improving accuracy and efficiency in tracking expenses, sales, and stock.
+            \item Implemented a marginal tax scheme, reducing VAT costs through optimized stock records.
+            \item Created performance dashboards, providing directors with clear, actionable insights.
+            \item Successfully led a change of use application, securing local council approval for the company's strategic growth.
+            \item Developed time-series graphs in R to illustrate the impact of COVID restrictions on business performance, securing government support.
+        \end{itemize}}
         %%% %%%
-
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Certificates
-        \section*{{\faCertificate} CERTIFICATES}
-
-        \adjustbox{valign=t}{\begin{minipage}{2cm}
-                \begin{center}
-                    \includegraphics[width=1.8cm]{harvard.jpg}
-                \end{center}
-            \end{minipage}}
-        \hfill \vline \hfill
-        \adjustbox{valign=t}{\begin{minipage}{9cm}
-                \begin{itemize}
-                    \scriptsize
-                    \item CS50: Introduction to Computer Science (\textit{EDX, 2020})
-                    \item CS50's Web Programming with Python and JavaScript (\textit{EDX, 2021})
-                \end{itemize}
-            \end{minipage}}
 
         \vspace*{0.2cm}
 
