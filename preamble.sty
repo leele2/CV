@@ -111,6 +111,7 @@
         \end{tikzpicture}
     \end{center}
 }
+
 \newcommand{\aboutMe}[1]
 {
     \ruleline{\textbf{About Me}}
@@ -293,6 +294,20 @@
         }
 }
 %% %%
+%% Certificates %%
+\newcommand{\certificates}[1]{%
+    \adjustbox{valign=t}{\begin{minipage}{2cm}
+            \begin{center}
+                \includegraphics[width=1.8cm]{harvard.jpg}
+            \end{center}
+        \end{minipage}}
+    \hfill \vline \hfill
+    \adjustbox{valign=t}{\begin{minipage}{9cm}
+            \begin{itemize}
+                \scriptsize
+                \item CS50: Introduction to Computer Science (\textit{EDX, 2020})
+                \item CS50's Web Programming with Python and JavaScript (\textit{EDX, 2021})
+            \end{itemize}
         \end{minipage}}
 }
 
