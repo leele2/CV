@@ -94,8 +94,23 @@
     }\vspace{-0.7cm}%
 }
 
-% Command Example:
-% \simpleheader{titleBackColor}{Name}{Surname}{Job}{textColor}
+\newcommand{\profilePicture}[0]
+{
+    % Picture
+    \begin{center}
+        \begin{tikzpicture}
+            \node[
+                circle,
+                minimum size=\cvPictureWidth,
+                path picture={
+                        \node at (path picture bounding box.center){
+                            \includegraphics[width=\cvPictureWidth]{Portrait.jpg}
+                        };
+                    }]
+            {};
+        \end{tikzpicture}
+    \end{center}
+}
 
 % Next page header
 \newcommand{\newpageheader}[5]{
