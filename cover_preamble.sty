@@ -110,12 +110,14 @@
 % Command for letter content
 \usepackage{ragged2e}
 \usepackage[skip=0.2cm]{parskip}
+\usepackage{microtype}
 \newcommand\coverContent[1]{
-    \begin{justify}
+    \begin{RaggedRight}
+        \hyphenpenalty=10000
         \foreach \x in {#1}{
                 \noindent{}{\x}\par
             }
-    \end{justify}
+    \end{RaggedRight}
 }
 
 % Define constants for the 5 variables for coverhead function
