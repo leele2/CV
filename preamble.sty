@@ -82,10 +82,8 @@
 \setlength\cvPictureWidth{4cm}
 \def\sectionspace{\vspace*{0.22cm}}
 
-% avoid line overflow
-% \setlength{\emergencystretch}{2pt}
-
 % top box with simple header
+% Command Example:
 \newcommand{\simpleheader}[5]{
     \tikz[remember picture,overlay] {%
         \node[rectangle, fill=#1, anchor=north, minimum width=\paperwidth, minimum height=3.5cm](header) at (current page.north){};%
