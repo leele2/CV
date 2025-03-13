@@ -84,6 +84,7 @@
 
 % top box with simple header
 % Command Example:
+% \simpleheader{titleBackColor}{Name}{Surname}{Job}{textColor}
 \newcommand{\simpleheader}[5]{
     \tikz[remember picture,overlay] {%
         \node[rectangle, fill=#1, anchor=north, minimum width=\paperwidth, minimum height=3.5cm](header) at (current page.north){};%
@@ -294,6 +295,7 @@
         }
 }
 %% %%
+
 %% Certificates %%
 \newcommand{\certificates}[1]{%
     \adjustbox{valign=t}{\begin{minipage}{2cm}
