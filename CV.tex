@@ -9,32 +9,17 @@
 \simpleheader{titleBackColor}{Lee}{Luderman}{Software Engineer | Data Scientist | Expertise in Python, R, and \textsc{Matlab}}{white}
 
 % Start Minipages
-\vspace*{3.49cm}% start 8 cm from the top of the page}
+\vspace*{3.49cm}% start 8 cm from the top of the page
 \adjustbox{valign=t}{\begin{minipage}{7.3cm} % large 7.4 cm from the top
         \vspace*{1.2cm} % text starts 1cm under the top of the minipage
 
-        % Picture
-        \begin{center}
-            \begin{tikzpicture}
-                \node[
-                    circle,
-                    minimum size=\cvPictureWidth,
-                    path picture={
-                            \node at (path picture bounding box.center){
-                                \includegraphics[width=\cvPictureWidth]{Portrait.jpg}
-                            };
-                        }]
-                {};
-            \end{tikzpicture}
-        \end{center}
+        %%% Profile section %%%
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Profile section
-        \ruleline{\textbf{About Me}}
-        I am a versatile professional with a strong background in data analysis, software development, and financial management. My recent roles involved developing automation solutions with Python and creating a responsive website using Next.js and React. With a master's degree in mathematics and expertise in MATLAB, R, and Python, I excel at transforming complex data into actionable insights. I am currently seeking software engineering, data science, and data analytics opportunities in Sydney. %
+        % \profilePicture{}
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % Contact Section
+        \aboutMe{I am a versatile professional with a strong background in data analysis, software development, and financial management. My recent roles involved developing automation solutions with Python and creating a responsive website using Next.js and React. With a master's degree in mathematics and expertise in MATLAB, R, and Python, I excel at transforming complex data into actionable insights. I am currently seeking software engineering, data science, and data analytics opportunities in Sydney.}
+
+        \sectionspace{}
         \ruleline{\textbf{Contact}}
         \\
         \begin{tikzpicture}[every node/.style={inner sep=0pt, outer sep=0pt}]
