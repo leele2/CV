@@ -210,9 +210,9 @@
 \newcommand{\project}[7]{ % project-type, year, title, details, url, url-embeded text, languages used
     \footnotesize
     \textbf{#3}\newline
-    #4\par
-    % \noindent
-    \hfill{\vspace{-0.1mm} \href{#5}{\faGithub#6}~-~\normalsize
+    #4%\hfill
+    % \penalty100 % Small penalty for breaking here
+    ~\hbox{\href{#5}{\faGithub#6}~-~\normalsize
         \foreach \x in {#7}{
                 {\x}~
             }}
