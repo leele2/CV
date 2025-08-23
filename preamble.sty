@@ -169,7 +169,7 @@
 \newcommand{\MySectionB}[6]{ % input: years, logo, title, university, city, specialization, description
     \adjustbox{valign=t}{\begin{minipage}{2cm}
             \begin{center}
-                {\small \bfseries #1} \\
+                {\small #1} \\
                 \vspace*{0.1cm}
                 \includegraphics[width=1.2cm]{#2}
             \end{center}
@@ -210,8 +210,9 @@
 \newcommand{\project}[7]{ % project-type, year, title, details, url, url-embeded text, languages used
     \footnotesize
     \textbf{#3}\newline
-    #4
-    {\hspace{0.1mm} \href{#5}{\faGithub#6}~-~\normalsize
+    #4\par
+    % \noindent
+    \hfill{\vspace{-0.1mm} \href{#5}{\faGithub#6}~-~\normalsize
         \foreach \x in {#7}{
                 {\x}~
             }}
